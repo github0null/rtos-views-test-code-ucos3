@@ -1,0 +1,452 @@
+{
+  "name": "stm32_ucos-iii-template",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    "source"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [
+      {
+        "path": "examples/${EXAMPLE_DIRNAME}/app.c"
+      }
+    ],
+    "folders": [
+      {
+        "name": "uc-os3",
+        "files": [
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os.h"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_cfg_app.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_core.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_dbg.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_flag.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_mem.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_msg.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_mutex.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_prio.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_q.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_sem.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_stat.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_task.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_tick.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_time.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_tmr.c"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_trace.h"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_type.h"
+          },
+          {
+            "path": "libraries/uC-OS3-3.08.02/Source/os_var.c"
+          }
+        ],
+        "folders": [
+          {
+            "name": "port",
+            "files": [
+              {
+                "path": "libraries/uC-OS3-3.08.02/Ports/${UCOS_ARCH_DIR}/GNU/os_cpu.h"
+              },
+              {
+                "path": "libraries/uC-OS3-3.08.02/Ports/${UCOS_ARCH_DIR}/GNU/os_cpu_a.S"
+              },
+              {
+                "path": "libraries/uC-OS3-3.08.02/Ports/${UCOS_ARCH_DIR}/os_cpu_c.c"
+              },
+              {
+                "path": "libraries/uC-CPU-1.32.01/${UCOS_ARCH_DIR}/cpu_c.c"
+              },
+              {
+                "path": "libraries/uC-CPU-1.32.01/${UCOS_ARCH_DIR}/GNU/cpu.h"
+              },
+              {
+                "path": "libraries/uC-CPU-1.32.01/${UCOS_ARCH_DIR}/GNU/cpu_a.s"
+              },
+              {
+                "path": "libraries/uC-CPU-1.32.01/cpu_core.c"
+              },
+              {
+                "path": "libraries/uC-CPU-1.32.01/cpu_core.h"
+              },
+              {
+                "path": "libraries/uC-CPU-1.32.01/cpu_def.h"
+              },
+              {
+                "path": "libraries/uC-CPU-1.32.01/cpu_cache.h"
+              }
+            ],
+            "folders": []
+          },
+          {
+            "name": "config",
+            "files": [
+              {
+                "path": "include/os_config/cpu_cfg.h"
+              },
+              {
+                "path": "include/os_config/lib_cfg.h"
+              },
+              {
+                "path": "include/os_config/os_app_hooks.c"
+              },
+              {
+                "path": "include/os_config/os_app_hooks.h"
+              },
+              {
+                "path": "include/os_config/os_cfg.h"
+              },
+              {
+                "path": "include/os_config/os_cfg_app.h"
+              }
+            ],
+            "folders": []
+          }
+        ]
+      }
+    ]
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "96f9175adf2f7ae745d884f97b2def97"
+  },
+  "targets": {
+    "STM32F1": {
+      "excludeList": [
+        "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/ARM",
+        "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/IAR",
+        "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/CCS",
+        "source/board/stm32f4",
+        "source/board/stm32g0"
+      ],
+      "toolchain": "GCC",
+      "compileConfig": {
+        "cpuType": "Cortex-M3",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "source\\board\\${ConfigName}\\linker.ld",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null",
+        "archExtensions": ""
+      },
+      "uploader": "OpenOCD",
+      "uploadConfig": {
+        "bin": "",
+        "target": "stm32f1x",
+        "interface": "stlink",
+        "baseAddr": "0x08000000"
+      },
+      "uploadConfigMap": {
+        "JLink": {
+          "bin": "",
+          "baseAddr": "",
+          "cpuInfo": {
+            "vendor": "ST",
+            "cpuName": "STM32F103C8"
+          },
+          "proType": 1,
+          "speed": 8000,
+          "otherCmds": ""
+        }
+      },
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "include",
+          "include/os_config",
+          "source",
+          "source/board/stm32f1/Drivers/CMSIS/Include",
+          "source/board/stm32f1/Drivers/CMSIS/Device/ST/STM32F1xx/Include",
+          "source/board/stm32f1/Drivers/STM32F1xx_HAL_Driver/Inc",
+          "source/board/stm32f1/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy",
+          "source/board/stm32f1/Inc",
+          "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/GNU",
+          "libraries/uC-OS3-3.08.02/Source",
+          "libraries/uC-CPU-1.32.01",
+          "libraries/uC-CPU-1.32.01/ARM-Cortex-M/ARMv7-M/GNU",
+          "libraries/uC-LIB-1.39.01"
+        ],
+        "libList": [],
+        "defineList": [
+          "CPU_CFG_NVIC_PRIO_BITS=4",
+          "USE_FULL_LL_DRIVER",
+          "STM32F103xB",
+          "HSE_VALUE=8000000",
+          "HSE_STARTUP_TIMEOUT=100",
+          "LSE_STARTUP_TIMEOUT=5000",
+          "LSE_VALUE=32768",
+          "HSI_VALUE=8000000",
+          "LSI_VALUE=40000",
+          "VDD_VALUE=3300",
+          "PREFETCH_ENABLE=1"
+        ]
+      },
+      "builderOptions": {
+        "GCC": {
+          "version": 5,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "$float-abi-type": "softfp",
+            "output-debug-info": "enable",
+            "misc-control": "--specs=nosys.specs --specs=nano.specs"
+          },
+          "c/cpp-compiler": {
+            "language-c": "c11",
+            "language-cpp": "c++11",
+            "optimization": "level-debug",
+            "warnings": "all-warnings",
+            "one-elf-section-per-function": true,
+            "one-elf-section-per-data": true
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "remove-unused-input-sections": true,
+            "LIB_FLAGS": "-lm",
+            "$toolName": "auto",
+            "$outputTaskExcludes": [
+              ".bin",
+              ".s19"
+            ]
+          }
+        }
+      }
+    },
+    "STM32F4": {
+      "excludeList": [
+        "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/ARM",
+        "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/IAR",
+        "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/CCS",
+        "source/board/stm32f1",
+        "source/board/stm32g0"
+      ],
+      "toolchain": "GCC",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "scatterFilePath": "source\\board\\${ConfigName}\\linker.ld",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "ST",
+          "cpuName": "STM32F407VG"
+        },
+        "proType": 1,
+        "speed": 4000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "include",
+          "include/os_config",
+          "source",
+          "source/board/stm32f4/Drivers/CMSIS/Include",
+          "source/board/stm32f4/Drivers/CMSIS/Device/ST/STM32F4xx/Include",
+          "source/board/stm32f4/Drivers/STM32F4xx_HAL_Driver/Inc",
+          "source/board/stm32f4/Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+          "source/board/stm32f4/Inc",
+          "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/GNU",
+          "libraries/uC-OS3-3.08.02/Source",
+          "libraries/uC-CPU-1.32.01",
+          "libraries/uC-CPU-1.32.01/ARM-Cortex-M/ARMv7-M/GNU",
+          "libraries/uC-LIB-1.39.01"
+        ],
+        "libList": [],
+        "defineList": [
+          "CPU_CFG_NVIC_PRIO_BITS=4",
+          "USE_FULL_LL_DRIVER",
+          "HSE_VALUE=8000000",
+          "HSE_STARTUP_TIMEOUT=100",
+          "LSE_STARTUP_TIMEOUT=5000",
+          "LSE_VALUE=32768",
+          "EXTERNAL_CLOCK_VALUE=12288000",
+          "HSI_VALUE=16000000",
+          "LSI_VALUE=32000",
+          "VDD_VALUE=3300",
+          "PREFETCH_ENABLE=1",
+          "INSTRUCTION_CACHE_ENABLE=1",
+          "DATA_CACHE_ENABLE=1",
+          "STM32F407xx"
+        ]
+      },
+      "builderOptions": {
+        "GCC": {
+          "version": 5,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "$float-abi-type": "softfp",
+            "output-debug-info": "enable",
+            "misc-control": "--specs=nosys.specs --specs=nano.specs"
+          },
+          "c/cpp-compiler": {
+            "language-c": "c11",
+            "language-cpp": "c++11",
+            "optimization": "level-debug",
+            "warnings": "all-warnings",
+            "one-elf-section-per-function": true,
+            "one-elf-section-per-data": true
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "remove-unused-input-sections": true,
+            "LIB_FLAGS": "-lm",
+            "$toolName": "auto",
+            "$outputTaskExcludes": [
+              ".bin",
+              ".s19"
+            ]
+          }
+        }
+      }
+    },
+    "STM32G0": {
+      "excludeList": [
+        "source/board/stm32f4",
+        "source/board/stm32f1"
+      ],
+      "toolchain": "GCC",
+      "compileConfig": {
+        "cpuType": "Cortex-M0+",
+        "floatingPointHardware": "none",
+        "scatterFilePath": "source\\board\\${ConfigName}\\linker.ld",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null"
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "ST",
+          "cpuName": "STM32G030F6"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "include",
+          "include/os_config",
+          "source",
+          "source/board/stm32g0/Drivers/CMSIS/Include",
+          "source/board/stm32g0/Drivers/CMSIS/Device/ST/STM32G0xx/Include",
+          "source/board/stm32g0/Drivers/STM32G0xx_HAL_Driver/Inc",
+          "source/board/stm32g0/Core/Inc",
+          "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv6-M/GNU",
+          "libraries/uC-OS3-3.08.02/Source",
+          "libraries/uC-CPU-1.32.01",
+          "libraries/uC-CPU-1.32.01/ARM-Cortex-M/ARMv6-M/GNU",
+          "libraries/uC-LIB-1.39.01"
+        ],
+        "libList": [],
+        "defineList": [
+          "CPU_CFG_NVIC_PRIO_BITS=2",
+          "STM32G030xx",
+          "USE_FULL_LL_DRIVER",
+          "HSE_VALUE=8000000",
+          "HSE_STARTUP_TIMEOUT=100",
+          "LSE_STARTUP_TIMEOUT=5000",
+          "LSE_VALUE=32768",
+          "EXTERNAL_CLOCK_VALUE=12288000",
+          "HSI_VALUE=16000000",
+          "LSI_VALUE=32000",
+          "VDD_VALUE=3300",
+          "PREFETCH_ENABLE=1",
+          "INSTRUCTION_CACHE_ENABLE=1",
+          "DATA_CACHE_ENABLE=1"
+        ]
+      },
+      "builderOptions": {
+        "GCC": {
+          "version": 5,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "$float-abi-type": "softfp",
+            "output-debug-info": "enable",
+            "misc-control": "--specs=nosys.specs --specs=nano.specs"
+          },
+          "c/cpp-compiler": {
+            "language-c": "c11",
+            "language-cpp": "c++11",
+            "optimization": "level-debug",
+            "warnings": "all-warnings",
+            "one-elf-section-per-function": true,
+            "one-elf-section-per-data": true
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "remove-unused-input-sections": true,
+            "LIB_FLAGS": "-lm",
+            "$toolName": "auto",
+            "$outputTaskExcludes": [
+              ".bin",
+              ".s19"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "version": "3.6"
+}

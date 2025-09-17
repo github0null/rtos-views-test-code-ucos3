@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "name": "Debug: OpenOCD",
+            "request": "launch",
+            "toolchainPrefix": "arm-none-eabi",
+            "cwd": "${workspaceFolder}",
+            "executable": "./dist/rtos-view-stm32f1-ucos-iii-test.elf",
+            "runToEntryPoint": "main",
+            "liveWatch": {
+                "enabled": true,
+                "samplesPerSecond": 4
+            },
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32f1x.cfg"
+            ]
+        }
+    ]
+}
