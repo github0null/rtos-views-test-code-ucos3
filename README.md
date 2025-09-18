@@ -16,4 +16,4 @@ The source code is in `examples\stm32\app.c`
 
 1. Install `arm-none-eabi-gcc` toolchain
 
-2. Run `make prebuild && make`
+2. Run `make prebuild && make COMPILER_DIR=`

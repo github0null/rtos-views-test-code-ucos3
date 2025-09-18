@@ -146,7 +146,7 @@
     "uid": "96f9175adf2f7ae745d884f97b2def97"
   },
   "targets": {
-    "STM32F1": {
+    "stm32f1": {
       "excludeList": [
         "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/ARM",
         "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/IAR",
@@ -251,7 +251,7 @@
         }
       }
     },
-    "STM32F4": {
+    "stm32f4": {
       "excludeList": [
         "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/ARM",
         "libraries/uC-OS3-3.08.02/Ports/ARM-Cortex-M/ARMv7-M/IAR",
@@ -351,7 +351,7 @@
         }
       }
     },
-    "STM32G0": {
+    "stm32g0": {
       "excludeList": [
         "source/board/stm32f4",
         "source/board/stm32f1"
